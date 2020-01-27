@@ -70,9 +70,55 @@ public class TicTacToe
 
     //TODO: this method should check to see if there is a win or draw
     //      if either case is true display a message to the user and end game
-    public void checkBoard()
+   public void checkBoard()
     {
+        checkRow();
+        checkColumn();
+        checkDiagonalLeftToRight();
+        checkDiagonalRightToLeft();
+    }
 
+    public void checkRow()
+    {
+        for ( int r=0; r<3; r++ )
+        {
+                if(board[r][0] != ' ' && board[r][0] == board[r][1] && board[r][0] == board[r][2])
+                {
+                    System.out.println("You Win");
+                }
+            }
+        }
+
+    public void checkColumn()
+    {
+        for ( int c=0; c<3; c++ )
+        {
+            if(board[0][c] != ' ' && board[0][c] == board[1][c] && board[0][c] == board[2][c])
+            {
+                System.out.println("You Win");
+            }
+        }
+    }
+    public void checkDiagonalLeftToRight()
+    {
+        for ( int r=0; r<3; r++ )
+        {
+            if(board[r][0] != ' ' && board[r][0] == board[1][1] && board[r][0] == board[2][2])
+            {
+                System.out.println("You Win");
+            }
+        }
+    }
+
+    public void checkDiagonalRightToLeft()
+    {
+        for ( int c=0; c<3; c++ )
+        {
+            if(board[0][c] != ' ' && board[0][c] == board[1][1] && board[0][c] == board[2][0])
+            {
+                System.out.println("You Win");
+            }
+        }
     }
 
 
