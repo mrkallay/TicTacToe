@@ -76,6 +76,7 @@ public class TicTacToe
         checkColumn();
         checkDiagonalLeftToRight();
         checkDiagonalRightToLeft();
+        
     }
 
     public void checkRow()
